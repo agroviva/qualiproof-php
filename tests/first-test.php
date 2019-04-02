@@ -1,39 +1,39 @@
 <?php
-use Qualiproof\RpcPropertyList;
+
 use Qualiproof\RpcPropertyItem;
+use Qualiproof\RpcPropertyList;
 
 ini_set('soap.wsdl_cache_enabled', 0);
 ini_set('soap.wsdl_cache_ttl', 900);
 ini_set('default_socket_timeout', 15);
 
-$url = "http://pig.qualiproof.de/pigrelease/services/RpcGateway?WSDL";
-$client  = new SoapClient($url, [
-	"trace" => true,
-]); 
+$url = 'http://pig.qualiproof.de/pigrelease/services/RpcGateway?WSDL';
+$client = new SoapClient($url, [
+    'trace' => true,
+]);
 
 $client->__setLocation($url);
 
 $login = [
-	"user-id" 			=> "",						# user id
-	"alias-user" 		=> "",						# username
-	"alias-password" 	=> "",						# password
-	"language" 			=> "de"						# language
+    'user-id' 			     => '',						// user id
+    'alias-user' 		   => '',						// username
+    'alias-password' 	=> '',						// password
+    'language' 			    => 'de',						// language
 ];
 
-$RpcPropertyList = new RpcPropertyList ("get-qs-category-details", new RpcPropertyItem);
+$RpcPropertyList = new RpcPropertyList('get-qs-category-details', new RpcPropertyItem());
 $RpcPropertyList->toProperties($login);
 $RpcPropertyList->toProperties([
-	"location-vvvo-number" => "",			#location vvvo number
-	"date" => date("Y-m-d")
+    'location-vvvo-number' => '',			//location vvvo number
+    'date'                 => date('Y-m-d'),
 ]);
 
 // $RpcPropertyList->setName("get-sample-overview");
 // $RpcPropertyList->setProperties(new RpcPropertyItem("start-date", "2010-01-01"));
 // $RpcPropertyList->setProperties(new RpcPropertyItem("end-date", "2019-01-01"));
 
+// Call wsdl function
+$result = $client->process($RpcPropertyList);
 
-// Call wsdl function 
-$result = $client->process($RpcPropertyList); 
-
-// Echo the result 
-echo "<pre>".print_r($result, true)."</pre>"; 
+// Echo the result
+echo '<pre>'.print_r($result, true).'</pre>';
