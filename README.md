@@ -1,10 +1,10 @@
 # Qualiproof Gateway
-- Check this [link](http://qualiproof.de/qualitype/gateway) to see the official documentation of how to use Qualiproof Gateway
+- visit this [link](http://qualiproof.de/qualitype/gateway) to see the official documentation of how to use Qualiproof Soap Gateway
 
 # Installation using Composer
 - run `composer requrie agroviva/qualiproof-api "dev-master"`
 - implement the requried classes 
-  ` 
+```php
    	<?php
 	use Qualiproof\RpcPropertyList;
 	use Qualiproof\RpcPropertyItem;
@@ -17,4 +17,4 @@
 	$client->__setLocation($url);
 
 	# write your code below......
-  `
+```
