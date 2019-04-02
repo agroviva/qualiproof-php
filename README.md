@@ -19,3 +19,6 @@
 	# write your code below......
 ```
 - check the tests folder for a better overview of how to use this tool
+
+# License
+This tool is an open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
