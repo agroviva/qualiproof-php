@@ -1,4 +1,5 @@
 <?php
+
 namespace Qualiproof;
 
 class RpcPropertyItem
@@ -6,25 +7,29 @@ class RpcPropertyItem
     public $key;
     public $value;
 
-    public function __construct(string $key = "", string $value = "")
+    public function __construct(string $key = '', string $value = '')
     {
         $this->key = $key;
-        $this->value = $value;  
+        $this->value = $value;
     }
 
-    public function getKey() {
+    public function getKey()
+    {
         return $this->key;
     }
 
-    public function setKey(string $key) {
+    public function setKey(string $key)
+    {
         $this->key = $key;
     }
 
-    public function getValue() {
+    public function getValue()
+    {
         return $this->value;
     }
 
-    public function setValue(string $value) {
+    public function setValue(string $value)
+    {
         $this->value = $value;
     }
 }
