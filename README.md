@@ -18,4 +18,4 @@
 
 	# write your code below......
 ```
-- check the test folder for a better overview of how to use this tool
+- check the tests folder for a better overview of how to use this tool
