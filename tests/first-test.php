@@ -7,13 +7,11 @@ ini_set('soap.wsdl_cache_enabled', 0);
 ini_set('soap.wsdl_cache_ttl', 900);
 ini_set('default_socket_timeout', 15);
 
-
-
 $login = [
-    'user-id' => '', # user id
-    'alias-user' => '', # username
-    'alias-password' => '', # password
-    'language' => 'de',	# language
+    'user-id'        => '', // user id
+    'alias-user'     => '', // username
+    'alias-password' => '', // password
+    'language'       => 'de',	// language
 ];
 
 $RpcPropertyList = new RpcPropertyList('get-qs-category-details', new RpcPropertyItem());
@@ -23,12 +21,12 @@ $RpcPropertyList->toProperties([
     'date'                 => date('Y-m-d'),
 ]);
 
-# $RpcPropertyList->setName("get-sample-overview");
-# $RpcPropertyList->setProperties(new RpcPropertyItem("start-date", "2010-01-01"));
-# $RpcPropertyList->setProperties(new RpcPropertyItem("end-date", "2019-01-01"));
+// $RpcPropertyList->setName("get-sample-overview");
+// $RpcPropertyList->setProperties(new RpcPropertyItem("start-date", "2010-01-01"));
+// $RpcPropertyList->setProperties(new RpcPropertyItem("end-date", "2019-01-01"));
 
-# Call wsdl function
+// Call wsdl function
 $result = $client->process($RpcPropertyList);
 
-# Echo the result
+// Echo the result
 echo '<pre>'.print_r($result, true).'</pre>';
