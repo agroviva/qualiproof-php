@@ -10,10 +10,10 @@ class Gateway
      * @var array
      */
     private $login = [
-        'user-id' 			     => '',
-        'alias-user' 		   => '',
-        'alias-password' 	=> '',
-        'language' 			    => 'de',
+        'user-id' => '',
+        'alias-user' => '',
+        'alias-password' => '',
+        'language' => 'de',
     ];
 
     /**
