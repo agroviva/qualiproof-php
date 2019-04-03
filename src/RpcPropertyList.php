@@ -47,7 +47,11 @@ class RpcPropertyList
     public function toProperties(array $properties)
     {
         foreach ($properties as $key => $value) {
-            $this->setProperties(new RpcPropertyItem($key, $value));
+            if (is_array($value)) {
+                $this->toProperties($value);
+            } else {
+                $this->setProperties(new RpcPropertyItem($key, $value));
+            }
         }
     }
 }
