@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Qualiproof Gateway for PHP
+ * Qualiproof Gateway for PHP.
  *
- * @package  Qualiproof
  * @author   Enver Morina <emorinaj@agroviva.de>
  */
 
