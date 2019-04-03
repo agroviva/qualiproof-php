@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Qualiproof Gateway for PHP.
+ *
+ * @author   Enver Morina <emorinaj@agroviva.de>
+ */
+
 namespace Qualiproof;
 
 class Gateway
